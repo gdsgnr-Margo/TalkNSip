@@ -1,0 +1,9 @@
+Talk n' Sip
+PHP Project CS 403
+
+Members and Contributions
+Fundano, Ma. Margaret - Code [Homepage, Menu page, About page .js .html .css .php]
+Gonzales, Shana Eve - Database [Excel, MySQL]
+Yap, Louise Anne - Code [Sign in/Sign up .js .html .css .php]
+
+https://github.com/gdsgnr-Margo/TalkNSip.git
