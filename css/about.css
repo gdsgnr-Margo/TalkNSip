@@ -1,0 +1,65 @@
+.cont06 {
+    padding: 1rem 8%;
+    height: 50vh;
+    background: url('../pictures/blk-tns-bg-pics.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont07 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+    padding: 0 70px;
+}
+
+.about01 {
+    z-index: 1;
+    text-align: center;
+    justify-content: center;
+}
+
+.about01 h1 {
+    font-size: 6rem;
+    margin-bottom: 20px;
+    color: #f6f4f1;
+}
+
+.about01 p {
+    font-size: 1rem;
+    color: #f6f4f1;
+}
+
+.cont08 {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background: url('../pictures/abtb-tns-bg-pics.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 1rem 8%;
+}
+  
+.about02 {
+    display: flex;
+    flex-direction: column;
+    padding-left: 35rem;
+}
+  
+.about02 h1 {
+    font-size: 5rem;
+    color: #000;
+    margin-bottom: 20px;
+}
+  
+.about02 p {
+    font-size: 1.2rem;
+    color: #000;
+}

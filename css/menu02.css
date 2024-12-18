@@ -1,0 +1,549 @@
+
+/* Cart and product */
+.cont05{
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+    margin-top: 7rem;
+    margin-bottom: 6rem;
+}
+
+.mycart {
+    display: flex;
+    width: 380px;
+    padding: 5px;
+    max-height: 600px; 
+    overflow-y: auto;
+}
+
+
+.sidebar {
+    height: fit-content;
+    width: 350px;
+    border-radius: 30px;
+    background-color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+.head {
+    border-radius: 3px;
+    height: 40px;
+    margin-bottom: 20px;
+    color: #2D2424;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 1000;
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.foot1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid rgb(70, 34, 0);
+}
+
+.foot1 h6 {
+    font-weight: 500;
+    font-style: italic;
+    color: #505050;
+}
+
+.order-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.order-item .box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.order-item .img-box img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.order-item .bottom h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+}
+
+.order-item .bottom p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.order-item .addBtn,
+.order-item .minusBtn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 5px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Adjust width based on content */
+}
+
+.order-item .addBtn:hover,
+.order-item .minusBtn:hover {
+    background-color: #45a049;
+}
+
+.order-item .deleteBtn {
+    display: block;
+    margin-top: 2px;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #ff4d4d;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.order-item .deleteBtn:hover {
+    background-color: #e60000;
+}
+
+.order-item .button-container {
+    display: flex;
+    justify-content: space-between; /* Distribute buttons on opposite sides */
+    width: 100%;
+    margin-bottom: 5px; /* Space between the buttons and the delete button */
+    gap: 5px; /* Add space between add and minus buttons */
+}
+
+
+
+
+
+/* Products */
+.menu {
+    max-width: 70%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 260px;
+    height: 450px;
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+    margin: 5px;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    display: block;
+    border-radius: 10px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Adjust padding to prevent overflow or misalignment */
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.card-description {
+    font-size: 0.7rem;
+    color: #666;
+    margin-bottom: 20px;
+    width: 100%;
+    font-weight: 300;
+}
+
+.card-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(70, 34, 0);
+    width: 100%;
+}
+/* end */
+
+
+/* Form popup */
+#formContainer {
+  position: fixed;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 600px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.showFormBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    padding: .8rem 2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    box-shadow: rgb(0 0 0 / 8%) 0 0 11px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: all 0.5s ease;
+    width: 210px;
+    letter-spacing: 1.5px;
+    gap: 0.5rem; /* Adds spacing between icon and text */
+}
+
+.showFormBtn img.button-icon {
+    height: 1rem; /* Adjust size for custom icon */
+    width: auto;
+}
+
+.showFormBtn:hover {
+    color: #fff;
+    background-color: rgb(70, 34, 0);
+    box-shadow: rgb(70, 34, 0) 0px 7px 29px 0px;
+}
+
+.showFormBtn:active {
+    background-color: rgb(70, 34, 0);
+    color: #fff;
+    box-shadow: rgb(70, 34, 0) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+#productForm label {
+  font-weight: bold;
+}
+
+#productForm input[type="text"],
+#productForm input[type="number"],
+#productForm select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#productForm button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2D2424;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#productForm button:hover {
+  background-color: rgb(70, 34, 0);
+}
+
+#productForm h1 {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin: 5px;
+}
+
+#productForm p {
+    text-align: center;
+    font-size: 15px;
+    margin: 10px;
+    margin-bottom: 20px;
+    color: #505050;
+}
+
+#cancelBtn {
+  background-color: #ccc;
+}
+
+#cancelBtn:hover {
+  background-color: #999;
+}
+/* end */
+
+
+
+
+/* Hide */
+.hidden {
+    display: none;
+}
+
+
+/* Order item layout cart*/
+.order-item {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+}
+
+.img-box {
+    width: 30%;
+    margin: 5px;
+}
+
+.img-box img {
+    max-width: 100%;
+}
+
+.bottom {
+    text-align: left;
+    margin: 5px;
+    width: 60%;
+}
+
+.bottom p {
+    margin: 5px 0;
+}
+
+.deleteBtn {
+    width: 90%;
+    margin-bottom: 5px;
+    display: inline-block;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(70, 34, 0);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.deleteBtn:hover {
+    background-color: #505050;
+}
+/* end */
+
+
+/* Add to cart list form */
+.place {
+    display: inline-block;
+    margin-top: 1rem;
+    margin-bottom: 20px;
+    padding: .8rem 3rem;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    box-shadow: rgb(0 0 0 / 8%) 0 0 11px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: all 0.5s ease;
+    width: 300px;
+    letter-spacing: 1.5px;
+}
+
+.place:hover {
+    color: #fff;
+    background-color: rgb(70, 34, 0);
+    box-shadow: rgb(70, 34, 0) 0px 7px 29px 0px;
+}
+
+.place:active {
+    background-color: rgb(70, 34, 0);
+    color: #fff;
+    box-shadow: rgb(70, 34, 0) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+.place a {
+    color: #fff;
+}
+
+.place {
+    display: none;
+}
+
+/* end */
+
+#orderFormContainer {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff; /* Add background color */
+    max-height: 500px; /* Set the desired maximum height */
+    overflow-y: auto;  /* Enable vertical scrolling */
+    z-index: 2;
+}
+
+#orderForm h1 {
+    text-align: center;
+    color: #333;
+}
+
+#orderForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+#orderForm input,
+#orderForm select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#orderForm input:focus,
+#orderForm select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#orderForm .foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#orderForm .foot h3 {
+    margin: 0;
+    color: #555;
+}
+
+#orderForm button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#orderForm button:hover {
+    background-color: #0056b3;
+}
+
+#orderForm button#cancelOrder {
+    background-color: #dc3545;
+}
+
+#orderForm button#cancelOrder:hover {
+    background-color: #c82333;
+}
+
+
+/* Add necessary styles for the Go back to the top button */
+
+#backToTopBtn {
+    display: none; /* Initially hidden */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s;
+    width: 200px;
+    height: 50px;
+}
+
+#backToTopBtn.show {
+    display: block; /* Show the button when 'show' class is added */
+}
+
+#backToTopBtn:hover {
+    background-color: #505050;
+    color: #fff;
+}
+
+/* Optional: Style for responsiveness */
+@media (max-width: 600px) {
+    #backToTopBtn {
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+

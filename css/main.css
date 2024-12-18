@@ -1,0 +1,589 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #f6f4f1;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    background-color: #000;
+    height: auto;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 10px 0;
+}
+
+.navbar {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #000;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #f6f4f1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar .logo .img {
+    width: 100px;
+    object-fit: contain;
+}
+
+.navbar .logo span {
+    font-size: 1.2rem; 
+    font-weight: bold;
+    color: #000;
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbarlinks {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbarlinks a {
+    color: #f6f4f1;
+    text-decoration: none;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+    padding: 10px;
+}
+
+.navbarlinks a:hover {
+    font-weight: bold;
+    border: 1px solid #f6f4f1;
+    border-radius: 10px;
+}
+
+.btnlogout {
+    background-color: #000;
+    color: #f6f4f1;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 0.3rem 1rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.btnlogout:hover {
+    transform: scale(0.95);
+    background-color: #f6f4f1;
+    color: #000;
+}
+
+.btnlogout:active {
+    scale: 0.95;
+}
+
+.btntogglemenu .fa-solid {
+    color: #f6f4f1;
+}
+
+/* Initial hidden state for the dropdown */
+.dropdownmenu {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 70px;
+    right: 2rem;
+    background-color: #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.dropdownmenu.open {
+    display: block; /* Display when the menu is toggled */
+}
+
+/* Additional styles for a smooth transition */
+.dropdownmenu ul {
+    padding: 10px;
+    list-style-type: none;
+}
+
+.dropdownmenu a {
+    padding: 10px;
+    color: #f6f6f6;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdownmenu a:hover {
+    background-color: #444;
+}
+
+/* Hide the toggle menu when it is open */
+.btntogglemenu[aria-expanded="true"] {
+    color: #f6f6f6;
+}
+
+.screen {
+    position: relative;
+    overflow: hidden; 
+    width: 100%;
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background-color: #000; 
+    color: #f6f4f1; 
+    font-size: 1rem;
+}
+
+.marquee {
+    display: inline-block;
+    position: absolute;
+    white-space: nowrap;
+    width: 100%; 
+    animation: marquee 15s linear infinite; 
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%); 
+    }
+}
+
+.brand {
+    padding-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: url('../pictures/tns-bg-pics.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.cont01 {
+    z-index: 1;
+    text-align: center;
+    justify-content: center;
+}
+
+.cont01 img {
+    width: 400px; 
+    height: auto; 
+}
+
+.subText {
+    width: 500px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .9rem 3.5rem;
+    border-radius: 50px;
+    border: 0;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: all 0.5s ease;
+    box-shadow: 0px 7px 29px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+}
+
+.button:hover {
+    letter-spacing: 3px;
+    color: #fff;
+    background-color: #000;
+    box-shadow: 0px 7px 29px rgba(0, 0, 0, 0.3);
+}
+
+.highprod {
+    padding: 1rem 8%;
+    height: 140vh;
+    background-image: linear-gradient(to right, #000000, #1e0d00);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont02 {
+    max-width: 1200px;
+    text-align: center;
+}
+  
+.cont02 h1 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    color: #f6f4f1;
+}
+  
+.cont02 p {
+    font-size: 1rem;
+    color: #f6f4f1;
+    margin-bottom: 40px;
+}
+  
+.cont03 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+  
+.card1 {
+    background-color: #f6f4f1;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: left;
+    width: 320px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+  
+.card1:hover {
+    transform: scale(1.03);
+}
+  
+.card1name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+  
+.card1img-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+  
+.card1img {
+    width: 220px;
+    height: 220px;
+    border-radius: 10px;
+}
+  
+.card1desc {
+    color: #4d4d4d;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 400;
+}
+  
+.card1price {
+    margin-top: 10px;
+    color: #2D2424;
+    font-weight: bold;
+}
+  
+.highprod a {
+    color: #000;
+}
+  
+.highprod a:hover {
+    color: #f6f4f1;
+}
+
+.brandmess {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    position: relative;
+    overflow: hidden;
+    background: url('../pictures/2tns-bg-pics.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.cont04 {
+    color: #f6f4f1;
+    margin-top: 395px;
+}
+
+.cont04 h1 {
+    width: 500px;
+    margin-top: 20px; 
+}
+
+.cont04 p {
+    width: 500px;
+    margin-top: 10px;  
+}
+
+footer {
+    width: 100%;
+    background: #f6f4f1;
+    color: #000;
+    padding: 40px 0px 30px;
+    font-size: 13px;
+    line-height: 20px;
+    position: relative;
+    overflow: hidden;
+    background: url('../pictures/footertns-bg-pics.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.footer-row {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footer-col {
+    flex-basis: 25%;
+    padding: 30px;
+}
+
+.footer-col img {
+    width: 10rem;
+    object-fit: contain;
+    padding-bottom: 15px;
+}
+
+.footer-col h3 {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+.footer-col p {
+    padding-left: 5px;
+    line-height: 1;
+}
+
+.footer-col ul {
+    list-style: none;
+    width: 100%;
+}
+
+.footer-col ul li {
+    cursor: pointer;
+    padding: 10px 0 10px 5px;
+}
+
+.footer-col ul li:hover {
+    background: #000;
+    color: #f6f4f1;
+    border-radius: 10px;
+}
+
+
+
+#backToTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    font-size: 16px;
+    background-color: #000;
+    color: #f6f4f1;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    display: none;
+    transition: background-color 0.3s ease;
+}
+
+#backToTopBtn:hover {
+    background-color: #f6f4f1;
+    color: #000;
+}
+
+@media (min-width: 1306px) {
+    .navbarlinks {
+        display: flex !important; 
+    }
+    .btntogglemenu {
+        display: none !important; 
+    }
+
+}
+
+@media (max-width: 1306px) {
+    .navbarlinks {
+        display: none;
+    }
+
+    .btnlogout {
+        display: none !important;
+    }
+
+    .btntogglemenu {
+        display: block;
+        padding-right: 5px;
+    }
+
+    .dropdownmenu {
+        display: none;
+    }
+
+    .dropdownmenu.open {
+        display: block;
+    }
+
+    .cont02 h1 {
+        font-size: 4rem;
+    }
+
+    .highprod {
+        padding: 1rem 5%;
+        height: 90vh;
+    }
+
+    .cont02 p {
+        font-size: 0.9rem;
+    }
+
+    .card1 {
+        width: 100%;
+    }
+
+    .card1img {
+        width: 100%;
+        height: auto;
+    }
+
+    header {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .dropdownmenu {
+        width: 100%;
+        left: 0;
+        right: 0;
+        padding: 1rem;
+    }
+
+    .brand .cont01 img {
+        width: 280px; 
+    }
+
+    .cont02 h1 {
+        font-size: 3rem;
+    }
+
+    .footer-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-col {
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+
+    #backToTopBtn {
+        font-size: 14px;
+        bottom: 15px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbarlinks {
+        display: block;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .navbarlinks a {
+        font-size: 1rem;
+        padding: 8px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .navbar .logo {
+        font-size: 1.2rem;
+    }
+
+    .btnlogout {
+        font-size: 1rem;
+        padding: 0.4rem 1.2rem;
+    }
+
+    .brand .cont01 img {
+        width: 250px;
+    }
+
+    .cont04 h1, .cont04 p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-col {
+        flex-basis: 100%;
+        text-align: center;
+        padding: 15px;
+    }
+
+    #backToTopBtn {
+        font-size: 14px;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+
+
+
